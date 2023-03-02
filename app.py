@@ -7,7 +7,7 @@ JOBS = [
     'id': 1,
     'title': 'Full Stack Dev',
     'location': 'London',
-    'salary': '£45,000',
+    'salary': '£95,000',
     
   },
 
@@ -15,7 +15,7 @@ JOBS = [
     'id': 2,
     'title': 'Backend Dev',
     'location': 'London',
-    'salary': '£35,000',
+    'salary': '£75,000',
     
   },
 
