@@ -1,55 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Careers</title>
-    <style>
-      h1 {
-        font-size: 40px;
-        font-family: Roboto;
-        font-weight: normal;
-        color: rgb(50,50,50);
-        text-align: center;
-      }
-
-      #banner {
-        width: 100%;
-        height: 360px;
-        object-fit: cover;
-      }
-
-      h2 {
-        font-family: Roboto;
-        font-size: 32px;
-        color: rgb(100, 100, 100);
-        text-align: center;
-      }
-
-      .bodytext {
-        font-familyfamily: Roboto;
-        color: rgb(80, 80, 80)
-      }
-
-      #container {
-        max-width: 720px;
-        margin: 0 auto 0 auto;
-        
-      }
-    </style>
+    <title>{{company_name}} Careers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous">
+      <style>
+        #banner {
+          height: 360px;
+          width: 100%;
+          object-fit: cover;
+          
+        }
+      </style>
   </head>
   <body>
-    <div id="container">
-    <h1>Career Opportunities</h1>
-    <img id="banner" src="https://flask-website-1.robedgar.repl.co/static/banner.jpg"
+    <div class="container">
+    <h1 class="text-center mt-2 mb-4">{{company_name}} Opportunities</h1>
+    <img class="img-fluid" id="banner" src="https://flask-website-1.robedgar.repl.co/static/banner.jpg"
       >
-      <h2>About Us</h2>
-      <p class="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi scelerisque eu ultrices vitae auctor eu augue ut lectus. In dictum non consectetur a erat nam at lectus urna. Purus ut faucibus pulvinar elementum integer enim neque. Praesent tristique magna sit amet purus gravida quis blandit turpis. Blandit massa enim nec dui. Eu ultrices vitae auctor eu augue ut lectus arcu bibendum.
+      <h2 class="text-center mt-2 mb-4">About Us</h2>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi scelerisque eu ultrices vitae auctor eu augue ut lectus. In dictum non consectetur a erat nam at lectus urna. Purus ut faucibus pulvinar elementum integer enim neque. Praesent tristique magna sit amet purus gravida quis blandit turpis. Blandit massa enim nec dui. Eu ultrices vitae auctor eu augue ut lectus arcu bibendum.
 
     </p>
-    <h2>Open Positions</h2>
-    <p class="bodytext">TODO Add jobs here...</p>
-      <div style=" text-align:center;">
-    <button>Contact Us</button>
-        <p>Copyright 2023</p>
+    <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+    <div>
+      {% for job in jobs %}
+        {% include 'jobitem.html' %}
+      {% endfor %}
+    </div>
+      <div class="text-center mt-4">
+    <button class="btn btn-primary btn-lg">Contact Us</button>
+        <p class="mt-4">Copyright 2023</p>
       </div>
     </div>
   </body>
